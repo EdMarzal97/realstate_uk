@@ -1,4 +1,5 @@
 import { Box, Flex, Highlight, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import { HiHomeModern } from 'react-icons/hi2';
 
 
@@ -11,10 +12,12 @@ const NavigationDesktop = () => {
         > 
             <Box maxWidth='1280px' margin='0 auto'>
                 <Flex alignItems='center' justifyContent='space-between'>
-                    <Box>
-                        <HiHomeModern size='30' />
-                        <Text fontSize='2xl' fontWeight='black'>Wheretolive</Text>
-                    </Box>
+                    <Link href='/'>
+                        <Box display="flex" gap='2' alignItems='center'>
+                            <HiHomeModern size='30' />
+                            <Text fontSize='2xl' fontWeight='black'>Wheretolive</Text>
+                        </Box>
+                    </Link>
                 </Flex>
             </Box>
         </Box>);
