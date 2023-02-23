@@ -1,4 +1,5 @@
 import { Box, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import { services, about, ourOffices, workWithUs } from './footerConsts'
 
 const Footer = () => {
@@ -16,8 +17,15 @@ export default Footer;
 const FooterLink = ({ name, link }) => {
     return ( 
         <Text>
-
+            <Link href={link}>{name}</Link>
         </Text>
      );
 }
+
+const FooterHeader = ({title}) => {
+    return ( 
+        <Text as='h4' fontWeight='light' fontSize='xl' marginBottom='1rem'>{title}</Text>
+     );
+}
+ 
  
