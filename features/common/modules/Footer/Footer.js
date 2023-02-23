@@ -13,8 +13,27 @@ const Footer = () => {
                             <FooterLink key={item.name} {...item}/>
                         ))}
                     </Flex>
+                    <Flex flexDirection='column'>
+                        <FooterHeader title='About' />
+                        {about.map((item) => (
+                            <FooterLink key={item.name} {...item}/>
+                        ))}
+                    </Flex>
+                    <Flex flexDirection='column'>
+                        <FooterHeader title='Our Offices' />
+                        {ourOffices.map((item) => (
+                            <FooterLink key={item.name} {...item}/>
+                        ))}
+                    </Flex>
+                    <Flex flexDirection='column'>
+                        <FooterHeader title='Work with Us' />
+                        {workWithUs.map((item) => (
+                            <FooterLink key={item.name} {...item}/>
+                        ))}
+                    </Flex>
                 </SimpleGrid>
             </Box>
+            <Box backgroundColor='blue.900' display='flex' padding='2rem' justifyContent='center' alignItems='center' flexDirection='column' color='white'></Box>
         </Box>
      );
 }
