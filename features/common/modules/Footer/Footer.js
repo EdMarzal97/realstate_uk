@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Text } from '@chakra-ui/react';
+import { Box, Flex, SimpleGrid, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import { services, about, ourOffices, workWithUs } from './footerConsts'
 
@@ -6,7 +6,14 @@ const Footer = () => {
     return ( 
         <Box backgroundColor='blue.600' >
             <Box maxWidth='1280px' margin='0 auto' paddingY='3rem' paddingX={{ base: '2rem', sm: '0' }}>
-                <SimpleGrid columns='4' color='whiteAlpha.700' gap='1.7rem' minChildWidth='150px'></SimpleGrid>
+                <SimpleGrid columns='4' color='whiteAlpha.700' gap='1.7rem' minChildWidth='150px'>
+                    <Flex flexDirection='column'>
+                        <FooterHeader title='Services' />
+                        {services.map((item) => (
+                            <FooterLink key={item.name} {...item}/>
+                        ))}
+                    </Flex>
+                </SimpleGrid>
             </Box>
         </Box>
      );
