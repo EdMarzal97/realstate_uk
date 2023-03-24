@@ -59,7 +59,9 @@ const Footer = () => {
             WheretoLive
           </Text>
         </Box>
-        <Text></Text>
+        <Text marginTop="1rem" fontSize="xs" textAlign="center">
+          All rights reserved - Copyright WheretoLive
+        </Text>
       </Box>
     </Box>
   );
